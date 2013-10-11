@@ -1,0 +1,31 @@
+CACHE MANIFEST
+# v1 000012
+
+# cache the larger stuff
+
+media/t1.mp3
+media/t1.ogg
+media/t2.mp3
+media/t2.ogg
+media/t3.mp3
+media/t3.ogg
+media/t4.mp3
+media/t4.ogg
+media/t5.mp3
+media/t5.ogg
+media/t6.mp3
+media/t6.ogg
+views/globe/images/globe-halo-shadow.png
+views/globe/new/bgSides.png
+views/globe/new/glowUpperLeft.png
+views/globe/images/Firefox-Continent-3000.gif
+os.woff
+osl.woff
+
+NETWORK:
+*
+http://*
+https://*
+
+
+

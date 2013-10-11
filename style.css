@@ -1,0 +1,292 @@
+body {
+
+  margin: 0;
+  padding: 0;
+  
+  /* min-height: 500px; */
+  
+  background: #000 url(views/globe/new/bgSides.jpg) top left repeat;
+  background-color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  
+  overflow: hidden;
+  
+/*   height: 1000px; */
+  
+  font-family: 'Open Sans',sans-serif;
+  
+/*   user-select: none; */
+  
+/*   overflow: hidden; */
+/*   min-height: 1500px; */
+
+}
+		  
+#bg-repeat {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 2500px;
+  height: 1000px;
+  
+  /*
+background: url(views/globe/new/bgSides.png) repeat-x;
+  background-size: 60px 1000px;
+  background-position: 0px 0px;
+*/
+  
+  transform: translate(-350px, -87px) scale(0.831);
+  
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(osl.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(os.woff) format('woff');
+}
+
+#loader-stage {
+
+  position: absolute;
+  bottom: 60px;
+  left: -28px;
+  z-index: 2000;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  
+}
+
+#loader {
+  
+  position: absolute;
+  top: 20px;
+  left: 9px;
+  
+  width: 164px;
+  height: 6px;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform: scale(0.5);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+}
+
+#loader #loader-pg {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1%;
+  height: 6px;
+  background: #999;
+  border-radius: 3px;
+  
+}
+
+#moz-brand {
+
+  position: absolute;
+  
+  bottom: 10px;
+  left: -19px;
+  
+  width: 70%;
+  height: 25px;
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 7px;
+  color: rgba(255,255,255,0.3);
+  padding-left: 38px;
+  padding-top: 56px;
+  background: url(images/mozilla_logo.png) top left no-repeat;
+  user-select: none;
+  pointer-events: none;
+  
+}
+
+@media screen and (min-width: 280px) and (max-width: 320px) { 
+
+  #moz-brand {
+  
+    top: 93%;
+    bottom: auto;
+  
+  }
+  
+  #loader-stage {
+    top: 91%;
+  }
+    
+
+}
+
+
+
+div {
+/* user-select: none; */
+}
+
+p {
+  user-select: none;
+}
+
+#debug {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  display: none;
+  padding: 5px;
+  width: 100%;
+  color: black;
+  font-size: 8px;
+  
+}
+
+#app-container {
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  overflow: hidden;
+  
+  min-height: 920px;
+  
+  width: 100%;
+  transform: translate3d(0,0,0);
+  perspective: 800px;
+  perspective-origin: 460px 350px;
+
+}
+
+#bloomers {
+    
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+  
+  width: 100%;
+  height: 100%; 
+
+
+  user-select: none;
+  pointer-events: none;
+
+/*   border: 3px solid red; */
+  
+
+  perspective: 800px;
+  perspective-origin: 460px 350px;
+
+  transform-style: preserve-3d; /* has to be like this for FF on Nexus 7 */
+    
+  transform: translate3d(0px, 0px, 0px);
+  
+  overflow: hidden;
+  
+  z-index: 110;
+  
+}
+
+body.client #bloomers {
+  display: none;
+}
+
+#moz-lockup {
+  
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: 2001;
+  width: 125px;
+  height: 50px;
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+  display: none;
+  margin-top: -70px;
+}
+
+
+#app-client-counter {
+  position: absolute;
+  top: -130px;
+  left: 75px;
+  z-index: 999;
+  overflow: hidden;
+  margin-left: -5px;
+  padding-top: 1px;
+  padding-left: 10px;
+  width: 90px;
+  height: 30px;
+/*   border-left: 1px solid white; */
+  pointer-events: none;
+  display: none;
+  
+}
+
+.client-dot {
+
+  display: inline-block;
+  float: left;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  width: 1px;
+  height: 1px;
+  background: #666;
+  
+}
+.client-dot.real {
+
+  display: inline-block;
+  float: left;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  width: 1px;
+  height: 1px;
+  background: white;
+  
+}
+
+
+#users-connected {
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  z-index: 999;
+  
+  width: 40px;
+  height: 20px;
+  border: 2px solid #fff;
+  
+  border-radius: 20px;
+  background: #ccc;
+  text-align: center;
+  line-height: 20px;
+  
+}
+
+
+/* let's hide the info stuff on page load */
+
+#app-info, #app-client-counter, #display-toggle { display: none; }
+
+/* responsive */
+@media screen and (min-width: 320px) {  
+/*   #moz-lockup { display: none; } */
+}

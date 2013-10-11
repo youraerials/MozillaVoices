@@ -1,0 +1,198 @@
+.welcome {
+
+  position: absolute;
+
+  min-width: 320px;
+  min-height: 550px; 
+  
+  width: 100%;
+  top: 0;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1100;
+  
+  font-family: 'Open Sans Light', sans-serif;
+  color: white;
+  
+  display: none;
+  
+}
+
+body.kiosk .welcome {
+  
+  display: block;
+}
+
+.welcome #lockup {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1100px;
+  height: 1100px;
+  background: url(../../images/lockup.jpg) top left no-repeat;
+  opacity: 0.5;
+  
+}
+
+.welcome #intro-copy {
+  
+  position: absolute;
+  top: 0px;
+  left: 260px;
+  width: 400px;
+  height: 800px;
+  
+}
+
+
+.welcome #text-next {
+  
+  position: absolute;
+  top: 219px;
+  left: 41px;
+  font-size: 68px;
+  letter-spacing: -2px;
+}
+
+.welcome #text-billion {
+  
+  position: absolute;
+  top: 276px;
+  left: 73px;
+  font-size: 90px;
+  letter-spacing: -2px;
+}
+
+.welcome #text-voices {
+  position: absolute;
+  top: 344px;
+  left: 41px;
+  font-size: 120px;
+  letter-spacing: -3px;
+  
+}
+
+.welcome .copy-lock {
+  
+  position: absolute;
+  
+  opacity: 0;
+  top: 505px;
+  left: 128px;
+  font-size: 24px;
+  letter-spacing: 0px;
+  width: 230px;
+  line-height: 30px;
+  animation: intro-text 6s ease-in-out;
+  
+}
+
+.welcome #copy-1 {
+    
+}
+
+.welcome #copy-2 {
+  
+  animation-delay: 5s;
+  
+}
+
+.welcome #copy-3 {
+  
+  animation-delay: 10s;
+}
+
+.welcome #copy-4 {
+
+  animation-delay: 15s;
+  
+}
+
+.welcome #copy-5 {
+  
+
+  animation-delay: 20s;
+}
+
+.welcome #copy-6 {
+  
+  animation-delay: 25s;
+  
+}
+
+
+@keyframes intro-text {
+  
+  0% {
+    
+    opacity: 0;
+    transform: translate3d(-500px, 0px, 0) scale(0.01);
+    
+  }
+  
+  20% {
+    
+    opacity: 1;
+    transform: translate3d(0px, 0, 0) scale(1);    
+    
+  }
+  
+  80% {
+    
+    opacity: 0.8;
+    transform: translate3d(0px, 0, 0) scale(1);
+    
+  }
+  
+  100% {
+    
+    opacity: 0;
+    transform: translate3d(1500px, 0px, 0px) scale(7);
+    
+  }
+  
+}
+
+
+
+/* responsive */
+	
+
+@media screen and (min-width: 480px) and (max-width: 568px) { 
+	
+  .welcome #intro-copy {
+    
+
+    transform: translate3d(-280px, -260px, 0) scale(0.6);
+    
+  }
+
+}
+
+@media screen and (max-height: 480px) { 
+
+  .welcome #intro-copy {
+    
+
+    transform: translate3d(-280px, -280px, 0) scale(0.6);
+    
+  }
+
+}
+
+@media screen and (min-width: 280px) and (max-width: 479px) {  
+
+  
+  .welcome #intro-copy {
+    
+
+    transform: translate3d(-330px, -200px, 0) scale(0.7);
+    
+  }
+
+}
+
+		

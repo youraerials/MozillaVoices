@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html xmanifest="cache.appcache">
+	<head>
+		<title>dclare testing and examples</title>
+		
+		<!-- dclare libs -->
+		<script src="../js/dclare-lib.js"></script>
+		<script src="../js/dclare.js"></script>
+		<script src="js/application.js"></script>
+		
+		<!-- view delegates -->
+		<script src="views/test/delegate.js"></script>
+		<script src="views/sv1/delegate.js"></script>
+		<script src="views/bloom/delegate.js"></script> 
+		
+		<!-- static styles -->
+		<link rel="stylesheet" href="../css/dclare.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+		
+	</head>
+	<body>
+	
+	  <div id="my-app-container" class="dclare-container"></div>
+	
+	  <span class="test-toggle">testing</span>
+	
+	  <div data-d="(touchstart) showView viewname / arg1, arg2">ERROR TESTING</div>
+	  
+	  <div data-d="(mouseover) toggleClass: dc-debug / .test-toggle  ">TESTING custom event bind</div>
+	
+	  <hr>
+	
+	  <div data-d="(mousedown) emit: bloom / 1, event">TESTING Click to EMIT a bloom view</div>
+	  
+	  <div data-d="showView: test / persist">TESTING Click showview</div>
+	  
+	  <div data-d="hideView: test">TESTING click hide view</div>
+	  
+	  <div data-d="toggleView: test / uno, dose, a third param">TESTING click toggle view with params</div>
+	  
+	  <hr>
+	  
+	  <div data-d="addClass: dc-debug / div">TESTING Click addClass</div>
+	  
+	  <div data-d="removeClass: dc-debug / div, .test-toggle">TESTING Click removeClass</div>
+	  
+	  <div data-d="toggleClass: dc-debug / div, .test-toggle">TESTING Click toggleClass, two selectors</div>
+	  
+	  
+	  <!-- TBD!  NEED UNIT TESTS FOR: multiple directives -->
+	  
+	  <div id="transition-tester" data-d="call: testTransitionEnd">Testing TRANSITION end listeners</div>
+	  
+	  <div id="animation-tester" data-d="call: testAnimationEnd">Testing ANIMATION end listeners</div>
+	  
+	  
+	  <!-- view emitter test -->
+	  
+	  
+	  
+	
+	</body>
+	
+	
+</html>
+
+

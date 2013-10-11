@@ -1,0 +1,56 @@
+#simple-tones {
+  
+  position: absolute;
+  width: 100%;
+  height: 102%;
+    
+  top: 0px;
+  left: 0;
+  
+  display: none;
+  
+  user-select: none;
+  
+  z-index: 100001;
+   
+}
+
+body.client #simple-tones {
+
+  display: block;
+  
+}
+
+
+#simple-tones .tone-bar {
+
+  position: relative;
+  width: 100%;
+  height: 16.5%;
+  background: rgba(255,255,255,0.1); 
+  box-shadow: -3px 0 10px rgba(0,0,0,0.3); 
+  margin: 0;
+
+}
+
+
+#simple-tones .tone-bar.actv {
+  
+  background: rgba(0,0,0,0.3);
+  box-shadow: inset 5px 0 15px rgba(0,0,0,0.3);  
+  
+}
+
+
+#simple-tones .gen-tone-1 { background: rgba(255,255,255,0.0); }
+#simple-tones .gen-tone-2 { background: rgba(255,255,255,0.2); }
+#simple-tones .gen-tone-3 { background: rgba(255,255,255,0.3); }
+#simple-tones .gen-tone-4 { background: rgba(255,255,255,0.4); }
+#simple-tones .gen-tone-5 { background: rgba(255,255,255,0.5); }
+#simple-tones .gen-tone-6 { background: rgba(255,255,255,0.6); }
+
+#simple-tones.dc-animate-in {
+  
+  animation-duration: 50ms;
+  
+}

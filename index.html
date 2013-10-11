@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html manifest="manifest.appcache">
+	<head>
+		<title data-d-localize-key="title">Mozilla Voices</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		
+		<meta property="og:title" content="Mozilla Voices">
+		<meta property="og:url" content="http://mozillavoices.com">
+		<!-- static styles -->
+				
+		<link rel="stylesheet" href="dclare/css/dclare.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+		
+		<link rel="stylesheet" href="views/bloom/style.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="social-share/socialshare.min.css" media="screen" type="text/css">
+    
+    <script src="dclare/js/dclare-lib.js"></script>
+    
+    <meta property="og:title" content="#mozillasummit hear what it sounds like when we build the Web together http://mozillavoices.com">
+		
+	</head>
+	
+	<body class="no-touchmove">
+		
+	  <div id="app-container" class="dclare-container no-touchmove">
+  	  
+  	  <div id="globe" data-d="view: globe / animate"></div>
+  	  <div id="welcome-msg" data-d="view: welcome  / animate"></div>
+  	   
+	  </div>
+	  
+	  <div id="simple-tones" data-d="view: simpletones / animate" class="no-touchmove"></div>
+
+	  <div id="moz-brand">
+  	  <span data-d-localize-key="footer1"></span><br><span data-d-localize-key="footer2"></span>
+	  </div>
+
+	  <div id="info" data-d="view: info / animate"></div> 
+	  
+    <div id="app-client-counter" class="no-touchmove">
+      <div class="client-dot"></div>
+    </div>
+	  
+	  
+	  <audio id="t-1-1" autoload>
+  	  <source src="media/t1.ogg" type="audio/ogg">
+  	  <source src="media/t1.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-2-1" autoload>
+  	  <source src="media/t2.ogg" type="audio/ogg">
+  	  <source src="media/t2.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-3-1" autoload>
+  	  <source src="media/t3.ogg" type="audio/ogg">
+  	  <source src="media/t3.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-4-1" autoload>
+  	  <source src="media/t4.ogg" type="audio/ogg">
+  	  <source src="media/t4.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-5-1" autoload>
+  	  <source src="media/t5.ogg" type="audio/ogg">
+  	  <source src="media/t5.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-6-1" autoload>
+  	  <source src="media/t6.ogg" type="audio/ogg">
+  	  <source src="media/t6.mp3" type="audio/mp3">
+	  </audio>
+	  
+	  <audio id="t-1-2" autoload>
+  	  <source src="media/t1.ogg" type="audio/ogg">
+  	  <source src="media/t1.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-2-2" autoload>
+  	  <source src="media/t2.ogg" type="audio/ogg">
+  	  <source src="media/t2.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-3-2" autoload>
+  	  <source src="media/t3.ogg" type="audio/ogg">
+  	  <source src="media/t3.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-4-2" autoload>
+  	  <source src="media/t4.ogg" type="audio/ogg">
+  	  <source src="media/t4.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-5-2" autoload>
+  	  <source src="media/t5.ogg" type="audio/ogg">
+  	  <source src="media/t5.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-6-2" autoload>
+  	  <source src="media/t6.ogg" type="audio/ogg">
+  	  <source src="media/t6.mp3" type="audio/mp3">
+	  </audio>
+	  
+	  <audio id="t-1-3" autoload>
+  	  <source src="media/t1.ogg" type="audio/ogg">
+  	  <source src="media/t1.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-2-3" autoload>
+  	  <source src="media/t2.ogg" type="audio/ogg">
+  	  <source src="media/t2.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-3-3" autoload>
+  	  <source src="media/t3.ogg" type="audio/ogg">
+  	  <source src="media/t3.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-4-3" autoload>
+  	  <source src="media/t4.ogg" type="audio/ogg">
+  	  <source src="media/t4.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-5-3" autoload>
+  	  <source src="media/t5.ogg" type="audio/ogg">
+  	  <source src="media/t5.mp3" type="audio/mp3">
+	  </audio>
+	  <audio id="t-6-3" autoload>
+  	  <source src="media/t6.ogg" type="audio/ogg">
+  	  <source src="media/t6.mp3" type="audio/mp3">
+	  </audio>
+	  
+	    
+  <div id="loader-stage">
+    
+    
+    <div id="loader">
+    
+      <div id="loader-pg"></div>
+      
+    </div> 
+  
+  
+  </div>
+  
+  <!-- load scripts and dclare libs -->
+	  
+  <script>
+	  	  
+  	var loaderComplete = 0;
+  	var loaderElement = document.getElementById("loader-pg");
+  	var intv = setInterval(function() {
+  	  if (loaderComplete > 100) {
+	  	  clearInterval(intv);
+	  	  
+	  	  document.getElementById("loader-stage").style.display = "none";
+	  	  
+	  	  if ($ && $("#welcome-msg")) {
+  	  	  
+  	  	  $("#welcome-msg").prepend(
+  	  	  
+  	  	    $("#loader-container")
+  	  	  
+  	  	  );
+  	  	  
+	  	  }
+	  	  
+  	  }
+  	  else {
+  	    //window.scrollTo(0, 1);
+	  	  loaderComplete += 3;
+	  	  loaderElement.style.width = loaderComplete + "%";
+  	  
+  	  }
+  	
+  	}, 110);
+  	
+  </script>
+	  
+	<script src="dclare/js/dclare.js"></script>
+	<script src="js/application.js"></script>
+	
+	<!-- view delegates -->
+	<script src="views/globe/delegate.js"></script>
+	<script src="views/bloom/delegate.js"></script>
+	<script src="views/welcome/delegate.js"></script>
+	<script src="views/info/delegate.js"></script>
+	<script src="views/simpletones/delegate.js"></script>
+	
+	<script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35433268-32']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+
+	
+	</body>
+	
+</html>
+

@@ -1,0 +1,259 @@
+.dclare-container {
+  position: absolute;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,0);
+}
+
+div {
+  
+  position: relative;
+/*
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,0);
+*/
+  
+}
+
+.dc-bound {
+  
+  cursor: pointer;
+  
+}
+
+.dc-visible {
+  
+  display: block;
+  
+}
+
+
+.dc-invisible {
+  
+  display: none !important;
+  
+}
+
+.dc-debug {
+  
+  border: 1px solid red;
+  
+}
+
+
+.dc-animate-in {
+  
+  animation: dc-default-in 300ms;
+  animation-fill-mode: both !important;
+}
+
+.dc-animate-out {
+  
+  animation: dc-default-out 300ms;
+  animation-fill-mode: both !important;
+
+}
+
+@keyframes dc-default-in {
+  0% {
+    
+    opacity: 0;
+    transform: scale(1.2);
+  } 
+  100% {
+    
+    opacity: 1;
+    transform: scale(1);
+  } 
+  
+}
+
+@keyframes dc-default-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  } 
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    
+  } 
+  
+}
+
+@keyframes dc-fade-in {
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes dc-fade-out {
+	0% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+@keyframes dc-slide-left {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(-1300px, 0, 0);
+	}
+}
+
+@keyframes dc-slide-right {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(1300px, 0, 0);
+	}
+}
+
+
+@keyframes dc-slide-up {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, -1300px, 0);
+	}
+}
+
+@keyframes dc-slide-down {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 2400px, 0);
+	}
+}
+
+@keyframes dc-slide-up-from-below {
+	0% {
+		transform: translate3d(0, 2400px, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes dc-slide-down-from-above {
+	0% {
+		transform: translate3d(0px, -1300px, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes dc-slide-from-left {
+	0% {
+		transform: translate3d(-1300px, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes dc-slide-from-right {
+	0% {
+		transform: translate3d(1300px, 0, 0);
+	}
+	
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+@keyframes dc-fall-forward {
+	0% {
+		transform-origin: left bottom;
+		transform: rotateX(0);
+	}
+	
+	100% {
+		transform-origin: left bottom;
+		transform: translate3d(0, 0, -40px) rotateX(-100deg);
+	}
+}
+
+@keyframes dc-open-left {
+	0% {
+		transform-origin: left center;
+		transform: rotateY(0);
+	}
+	
+	100% {
+		transform-origin: left center;
+		transform: rotateY(-100deg);
+	}
+}
+
+@keyframes dc-open-right {
+	0% {
+		transform-origin: right center;
+		transform: rotateY(0);
+	}
+	
+	100% {
+		transform-origin: right center;
+		transform: rotateY(100deg);
+	}
+}
+
+@keyframes dc-close-left {
+	0% {
+		transform-origin: right center;
+		transform: rotateY(100deg);
+	}
+	
+	100% {
+		transform-origin: right center;
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes dc-close-right {
+	0% {
+		transform-origin: left center;
+		transform: rotateY(-100deg);
+	}
+	
+	100% {
+		transform-origin: left center;
+		transform: rotateY(0deg);
+	}
+}
+
+/* 
+
+TBD: 
+
+cube
+disolve
+blur + puff away
+B&W, etc, other filter fx
+scale out and in
+
+ */
+

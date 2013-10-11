@@ -1,0 +1,488 @@
+
+.world {
+  
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+  
+  left: 50%;
+  margin-left: -450px;
+  
+  width: 1000px;
+  height: 1000px; 
+
+  transform: translate3d(0,0,0); /* has to be like this for FF on Nexus 7 */
+  
+  transition-duration: 1s;
+  
+  transform-style: preserve-3d; /* has to be like this for FF on Nexus 7 */
+  
+  transform-origin: center center;
+  
+  user-select: none;
+  display: none;
+  overflow: hidden;
+}
+
+
+body.kiosk .world {
+  
+  display: block;
+}
+
+
+#m-cta {
+  
+  position: absolute;
+  top: 22px;
+  left: -68px;
+  color: rgba(255,255,255,0.7);
+  font-size: 22px;
+  
+  z-index: 200;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.cta-bold {
+  
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  
+}
+
+.world.xright-pos {
+  
+  transform: translate3d(200px,0,0);
+
+}
+
+
+.world #flat-world {
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1000px;
+  height: 1000px;
+
+  transition-duration: 2s;
+  
+}
+
+.world.xright-pos #flat-world {
+  left: 8px;
+  
+}
+
+.world #flat-world #flat-globe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3000px;
+  height: 1000px;
+
+  background: transparent url(images/Firefox-Continent-3000.gif) top left no-repeat;
+  background-size: 3000px 1000px;
+  
+  animation: flat-globe-pan 120s linear infinite;
+
+  transform: translate3d(0px,0px,0px);
+
+}
+
+.world #flat-world #flat-globe.retro {
+
+  animation: retro-flat-globe-pan 120s linear infinite;
+
+}
+
+@keyframes flat-globe-pan {
+  
+  0% {
+
+    transform: translate3d(-2000px, 0, 0);
+
+  }
+  
+  100% {
+
+    transform: translate3d(0px, 0, 0);
+  
+  }
+  
+}
+
+@keyframes retro-flat-globe-pan {
+  
+  0% {
+
+    transform: translateX(-2000px);
+
+  }
+  
+  100% {
+
+    transform: translateX(0px);
+  
+  }
+  
+}
+
+
+.world #globe-mask {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  
+  width: 516px;
+  height: 1000px;
+
+  background: url(images/globe-mask-part.png) top left no-repeat;
+  background-size: contain;
+  
+  user-select: none;
+  pointer-events: none;
+
+  display: block;
+  
+  z-index: 100;
+
+}
+
+
+.world #alt-mask {
+ 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  
+  width: 1000px;
+  height: 1000px;
+
+  background: transparent;
+  
+  user-select: none;
+  pointer-events: none;
+
+  display: block;
+  
+  z-index: 101;
+
+}
+
+
+
+/* alt 3d globe */
+
+.world #world-container {
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 692px;
+  height: 692px;
+  
+  /*   transform-origin: center center; */
+  transform-style: preserve-3d;
+  /*   transform-origin: center top; */
+  
+  transform: translate3d(56px,0,30px) rotateX(0deg) rotateY(40deg); /*for your firebugging pleasure */
+
+  /*   transition-property: transform; */
+  /*   transition-duration: 350ms; */
+
+  
+  border: 1px solid green;
+  
+
+  overflow: hidden;
+  border-radius: 100%;
+  
+  clip-path: url(#clipping);
+  
+  -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 69.9%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%);
+  
+
+}
+
+
+.world #world-center {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  
+  border: 1px solid red;
+  
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  
+  transform: translate3d(0,0,-375px);
+  
+  
+  animation: world-spin 120s linear infinite;
+  
+}
+
+.world #world-center .world-panel {
+  
+  position: absolute;
+  
+  width: 115px;
+  height: 751px;
+  background: blue;
+  
+  transform-origin: center center -435px;
+  transform-style: preserve-3d;
+  
+  transform: translate3d(0,0,0) rotateY(0deg);
+  
+  background: url(images/earth.jpg) top left no-repeat;
+  background-size: 2760px 751px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+
+
+.world #world-center .world-panel:nth-child(1)  { background-position: 0px 0;     transform: translate3d(300px,0,435px) rotateY(0deg); }
+.world #world-center .world-panel:nth-child(2)  { background-position: -115px 0;  transform: translate3d(300px,0,435px) rotateY(15deg); }
+.world #world-center .world-panel:nth-child(3)  { background-position: -230px 0;  transform: translate3d(300px,0,435px) rotateY(30deg); }
+.world #world-center .world-panel:nth-child(4)  { background-position: -345px 0;  transform: translate3d(300px,0,435px) rotateY(45deg); }
+.world #world-center .world-panel:nth-child(5)  { background-position: -460px 0;  transform: translate3d(300px,0,435px) rotateY(60deg); }
+.world #world-center .world-panel:nth-child(6)  { background-position: -575px 0;  transform: translate3d(300px,0,435px) rotateY(75deg); }
+.world #world-center .world-panel:nth-child(7)  { background-position: -690px 0;  transform: translate3d(300px,0,435px) rotateY(90deg); }
+.world #world-center .world-panel:nth-child(8)  { background-position: -805px 0;  transform: translate3d(300px,0,435px) rotateY(105deg); }
+.world #world-center .world-panel:nth-child(9)  { background-position: -920px 0;  transform: translate3d(300px,0,435px) rotateY(120deg); }
+.world #world-center .world-panel:nth-child(10) { background-position: -1035px 0; transform: translate3d(300px,0,435px) rotateY(135deg); }
+.world #world-center .world-panel:nth-child(11) { background-position: -1150px 0; transform: translate3d(300px,0,435px) rotateY(150deg); }
+.world #world-center .world-panel:nth-child(12) { background-position: -1264px 0; transform: translate3d(300px,0,435px) rotateY(165deg); }
+.world #world-center .world-panel:nth-child(13) { background-position: -1380px 0; transform: translate3d(300px,0,435px) rotateY(180deg); }
+.world #world-center .world-panel:nth-child(14) { background-position: -1495px 0; transform: translate3d(300px,0,435px) rotateY(195deg); }
+.world #world-center .world-panel:nth-child(15) { background-position: -1610px 0; transform: translate3d(300px,0,435px) rotateY(210deg); }
+.world #world-center .world-panel:nth-child(16) { background-position: -1725px 0; transform: translate3d(300px,0,435px) rotateY(225deg); }
+.world #world-center .world-panel:nth-child(17) { background-position: -1840px 0; transform: translate3d(300px,0,435px) rotateY(240deg); }
+.world #world-center .world-panel:nth-child(18) { background-position: -1955px 0; transform: translate3d(300px,0,435px) rotateY(255deg); }
+.world #world-center .world-panel:nth-child(19) { background-position: -2070px 0; transform: translate3d(300px,0,435px) rotateY(270deg); }
+.world #world-center .world-panel:nth-child(20) { background-position: -2185px 0; transform: translate3d(300px,0,435px) rotateY(285deg); }
+.world #world-center .world-panel:nth-child(21) { background-position: -2300px 0; transform: translate3d(300px,0,435px) rotateY(300deg); }
+.world #world-center .world-panel:nth-child(22) { background-position: -2415px 0; transform: translate3d(300px,0,435px) rotateY(315deg); }
+.world #world-center .world-panel:nth-child(23) { background-position: -2530px 0; transform: translate3d(300px,0,435px) rotateY(330deg); }
+.world #world-center .world-panel:nth-child(24) { background-position: -2645px 0; transform: translate3d(300px,0,435px) rotateY(345deg);  width: 115px}
+
+
+.world #word-glow {
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+  
+  width: 900px;
+  height: 900px;
+    
+  background: url(images/globe-halo-shadow.png) top left no-repeat;
+  background-size: contain;
+  
+  user-select: none;
+  pointer-events: none;
+
+  display: block;
+  
+  z-index: 105;
+  
+}
+
+.world.xright-pos #world-glow {
+  -moz-transform: translate3d(-55px, -117px, 50px) scale(0.836);
+  -webkit-transform: translate3d(-65px, -117px, 50px) scale(0.828);
+  
+}
+
+
+.world #word-highlight {
+
+  position: absolute;
+
+  top: 20px;
+  left: 0;
+  
+  width: 559px;
+  height: 550px;
+    
+  background: transparent url(new/glowUpperLeft.png) top left no-repeat;
+  background-size: contain;
+  
+  user-select: none;
+  pointer-events: none;
+
+  display: block;
+  
+  z-index: 106;
+
+
+}
+
+#bloomer-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+/*   overflow: hidden; */
+
+  width: 700px;
+  height: 700px;
+  
+  transform: translate3d(-10px, -90px, 300px) rotateX(0deg) scale(0.55);
+
+  transform-style: preserve-3d;
+  perspective: 800px;
+
+  user-select: none;
+  pointer-events: none;
+  
+}
+
+                                                                                  
+@keyframes world-spin {
+  
+  0% {
+    transform: translate3d(0,0,-350px) rotateY(0deg);
+  }
+  100% {
+    transform: translate3d(0,0,-350px) rotateY(360deg);
+  }
+  
+}
+
+
+.world.dc-animate-in {
+  
+  animation: world-in 50ms;
+  
+}
+
+.kiosk .world.dc-animate-in {
+  
+  animation: big-world-in 50ms ease-out;
+  
+}
+
+.world.dc-animate-out {
+  
+  animation: world-out 100ms;
+  
+}
+
+
+@keyframes world-in {
+  
+  0% {
+
+    left: 0px;
+  }
+  100% {
+    
+    left: 0px;   
+  }
+  
+}
+
+@keyframes big-world-in {
+  
+  0% {
+    bottom: -900px;
+  }
+  100% {
+    bottom: 0px;
+  }
+  
+}
+
+
+@keyframes world-out {
+  
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+
+@keyframes world-scroll-min {
+  
+  0% {
+    transform: translate3d(-150px,0,0);
+    
+  }
+  100% {
+    
+    transform: translate3d(100px,0,0);
+    
+  }
+  
+}
+
+
+@keyframes world-scroll {
+  
+  0% {
+    transform: translate3d(-1400px,0,0);
+    
+  }
+  100% {
+    
+    transform: translate3d(0px,0,0);
+    
+  }
+  
+}
+
+
+@keyframes world-rotate {
+  
+  0% {
+    
+    transform: translate3d(50px,10px,210px) rotate(54deg) rotateY(-30deg);
+    
+  }
+  
+  100% {
+    
+    transform: translate3d(50px,10px,210px) rotate(56deg) rotateY(-30deg);
+    
+  }
+}
+
+
+/* width-based media queries scale world */
+
+@media screen and (min-width: 280px) and (max-width: 320px) { 
+
+  .world.xright-pos {
+  
+    transform: translate3d(170px,0,0) rotateY(0deg);
+    
+  }
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 568px) { 
+
+  .world.xright-pos {
+  
+    transform: translate3d(200px,0,0) rotateY(0deg);
+    
+  }
+    
+
+}
+

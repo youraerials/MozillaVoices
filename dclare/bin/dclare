@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+
+console.log("this [will be] the dclare shell");
+
+var arg1 = process.argv[2];
+var arg2 = process.argv[3];
+var arg3 = process.argv[4];
+
+//console.log("running with args: ");
+//console.log(arg1)
+//console.log(arg2)
+//console.log(arg3);
+
+if (! arg1) {
+  
+  console.log("Usage:");
+  console.log("dclare create app [app name]");
+  console.log("dclare create view [view name]");
+  
+  console.log("dclare server start");
+  console.log("dclare server stop");
+  console.log("dclare server restart");
+  
+  
+}
+
+

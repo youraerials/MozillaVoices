@@ -1,0 +1,67 @@
+
+#test {
+  
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  
+  left: 300px;
+  top: 50px;
+  
+  background: red;
+  
+  transform: translate3d(0,150px,100px) scale(1) rotateY(0deg);
+  
+}
+
+
+
+#test .multi-test {
+  
+  transform: translate3d(0,0,20px);
+  
+}
+
+#test.dc-animate-in {
+  
+  animation: tester-in 2s;
+  
+}
+
+#test.dc-animate-out {
+  
+  animation: tester-out 2s;
+  
+}
+
+@keyframes tester-in {
+  
+  0% {
+    transform: scale(0.01) rotateY(50deg);
+    opacity: 0;
+  }
+  100% {
+    
+    transform: translate3d(0,150px,100px) scale(1) rotateY(0deg);
+    opacity: 1;
+    
+  }
+  
+}
+
+@keyframes tester-out {
+  
+  0% {
+    transform: translate3d(0,150px,100px) scale(1) rotateY(0deg);
+    opacity: 1;
+    
+  }
+  100% {
+    
+    transform: scale(0.01) rotateY(50deg);
+    opacity: 0;
+    
+  }
+  
+}
+
